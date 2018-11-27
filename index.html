@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Train Activity</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link type="text/css" href="css/reset.css"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
+
+</head>
+<body>
+        <div class="container">
+
+    <!-- Jumbotron -->
+            <div class="jumbotron" style="color: black">
+                    <h1 class="text-center">Anytime is Train Time</h1>
+                    <h3 class="text-center">Choo Choo. Chee Chee.</h3>
+            </div>
+
+            <div class="row">
+
+                    <div class="col-md-12">
+              <!-- Current Train Schedule Div -->
+                      <div class="card mb-4">
+                        <div class="card-header"><strong>Current Train Schedule</strong></div>
+                            <div class="card-body">
+                                <table class="table table-sm table-hover" id='train-schedule'>
+                                        <thead>
+                                        <tr>
+                                            <th scope="col"><strong>Train Name</strong></th>
+                                            <th scope="col"><strong>Destination</strong></th>
+                                            <th scope="col"><strong>Frequency (min)</strong></th>
+                                            <th scope="col"><strong>Next Arrival</strong></th>
+                                            <th scope="col"><strong>Minutes Away</strong></th>
+                                        </tr>
+                                        </thead>
+                                    <tbody>
+                                    </tbody>
+                                </table>
+                            </div>
+                      </div>
+                    </div>
+                </div>
+                  
+
+                    <div class="card border-primary">
+                            <div class="card-header background-primary"><strong>Add Train</strong></div>
+                            <div class="card-body">
+                                <form>
+                                    <div class="form-group">
+                                        <label for="nameInput"><strong>Train Name</strong></label>
+                                        <input type="text" class="form-control" id="nameInput">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="destinationInput"><strong>Destination</strong></label>
+                                        <input type="text" class="form-control" id="destinationInput">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="firstTrainTimeInput"><strong>First Train Time (HH:mm - military time)</strong></label>
+                                        <input type="text" class="form-control" id="firstTrainTimeInput">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="frequencyInput"><strong>Frequency (min)</strong></label>
+                                        <input type="text" class="form-control" id="frequencyInput">
+                                    </div>
+                                    <input class="btn btn-dark" id="submit" value="Submit">
+                                </form>
+ 
+                            </div>
+                        </div>
+                       
+                </div>
+                
+
+                    
+
+            <script src="https://www.gstatic.com/firebasejs/5.5.9/firebase.js"></script>
+        <script
+          src="https://code.jquery.com/jquery-3.3.1.min.js"
+          integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+          crossorigin="anonymous"></script>
+    <script src="javascript/main.js"></script>
+</body>
+</html>
